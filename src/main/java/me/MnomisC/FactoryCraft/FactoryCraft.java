@@ -8,8 +8,9 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import me.MnomisC.FactoryCraft.Reference.Reference;
 import me.MnomisC.FactoryCraft.Utility.Log;
-import me.MnomisC.FactoryCraft.handlers.Config;
+import me.MnomisC.FactoryCraft.handlers.ConfigHandler;
 import me.MnomisC.FactoryCraft.proxy.IProxy;
+import net.minecraft.creativetab.CreativeTabs;
 
 @Mod(modid = Reference.MOD_ID, name=Reference.NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY)
 public class FactoryCraft {
@@ -20,11 +21,13 @@ public class FactoryCraft {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
     public static IProxy proxy;
 
+    public static CreativeTabs tabFactoryCraft = new TabFactoryCraft(CreativeTabs.getNextID(), "FactoryCraft");
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         Log.info("Pre initialization started!");
-        Config.init(event.getSuggestedConfigurationFile());
-        FMLCommonHandler.instance().bus().register(new Config());
+        ConfigHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigHandler());
         Log.info("Pre initialization complete!");
     }
 

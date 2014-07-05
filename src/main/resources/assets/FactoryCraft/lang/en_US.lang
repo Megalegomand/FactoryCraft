@@ -1,0 +1,13 @@
+//Tiles//
+tile.WoodMachineFrame.name=Wood Machine Frame
+tile.Chimney.name=Chimney
+tile.LimeLeaves.name=Lime Leaves
+tile.LimeLog.name=Lime Log
+tile.StoneMachineFrame.name=Stone Machine Frame
+tile.IronMachineFrame.name=Iron Machine Frame
+tile.SteelMachineFrame.name=Steel Machine Frame
+tile.Lime.name=Lime
+tile.LimeSapling.name=Lime Sapling
+
+//Creative Tabs//
+itemGroup.FactoryCraft=Factory Craft
