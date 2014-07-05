@@ -1,0 +1,16 @@
+[
+{
+"modid": "FactoryCraft",
+"name": "Factory Craft",
+"description": "Stuff",
+"version": "1.0",
+"mcversion": "1.7.2",
+"logoFile": "",
+"url": "",
+"authors": ["Nomis", "DaniTheGamer"],
+"credits": "Nomis and DaniTheGamer",
+"parent": "",
+"screenshots": [],
+"dependencies": ["mod_MinecraftForge"]
+}
+]
